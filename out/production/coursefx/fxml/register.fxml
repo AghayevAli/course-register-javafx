@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="552.0" prefWidth="458.0" vgap="10"
+          xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="az.com.course.controller.RegisterController">
+    <columnConstraints>
+        <ColumnConstraints/>
+        <ColumnConstraints maxWidth="450.0" minWidth="52.0" prefWidth="450.0"/>
+        <ColumnConstraints maxWidth="398.0" minWidth="0.0" prefWidth="0.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints fillHeight="false"/>
+        <RowConstraints/>
+    </rowConstraints>
+    <children>
+        <Pane id="userName" prefHeight="532.0" prefWidth="542.0" style="-fx-background-color: E9EBEE;"
+              GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <Label layoutX="113.0" layoutY="182.0" prefHeight="22.0" prefWidth="51.0" text="Surname">
+                    <font>
+                        <Font name="System Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="115.0" layoutY="142.0" prefHeight="22.0" prefWidth="35.0" text="Name">
+                    <font>
+                        <Font name="System Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="112.0" layoutY="292.0" prefHeight="22.0" prefWidth="35.0" text="email">
+                    <font>
+                        <Font name="System Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="113.0" layoutY="222.0" prefHeight="22.0" prefWidth="19.0" text="Pin">
+                    <font>
+                        <Font name="System Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="112.0" layoutY="254.0" prefHeight="22.0" prefWidth="52.0" text="Password">
+                    <font>
+                        <Font name="System Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="109.0" layoutY="361.0" prefHeight="22.0" prefWidth="44.0" text="Position">
+                    <font>
+                        <Font name="System Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label contentDisplay="CENTER" layoutX="135.0" layoutY="52.0" text="Course register" textFill="#15238d"
+                       underline="true">
+                    <font>
+                        <Font size="27.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="userName" layoutX="194.0" layoutY="140.0"/>
+                <TextField fx:id="userSurname" layoutX="194.0" layoutY="181.0"/>
+                <TextField fx:id="userPin" layoutX="194.0" layoutY="220.0"/>
+                <PasswordField fx:id="userPassword" layoutX="195.0" layoutY="254.0"/>
+                <TextField fx:id="userEmail" layoutX="194.0" layoutY="290.0"/>
+                <RadioButton fx:id="male" layoutX="195.0" layoutY="331.0" mnemonicParsing="false" onAction="#gender"
+                             text="Male"/>
+                <RadioButton fx:id="female" layoutX="286.0" layoutY="331.0" mnemonicParsing="false" onAction="#gender"
+                             text="Female"/>
+                <ComboBox fx:id="userPosition" layoutX="194.0" layoutY="361.0" prefWidth="150.0"/>
+                <Button fx:id="buttonRegister" layoutX="247.0" layoutY="434.0" mnemonicParsing="false"
+                        onAction="#addUser" prefHeight="39.0" prefWidth="96.0" text="Register"/>
+                <Label fx:id="errorMessage" alignment="CENTER" layoutX="88.0" layoutY="400.0" prefHeight="17.0"
+                       prefWidth="284.0" textAlignment="CENTER" textFill="#f50808" textOverrun="CENTER_ELLIPSIS"/>
+            </children>
+        </Pane>
+    </children>
+</GridPane>
